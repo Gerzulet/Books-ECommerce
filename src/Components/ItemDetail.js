@@ -1,15 +1,43 @@
 
 import "../Assets/Item.css"
 import ItemCount from "./ItemCount"
-
+import {useState, useContext} from 'react'
+import CartWidget from './CartWidget'
+import CartContext from '../Context/CartContext'
 
 function ItemDetail(props) {
- 
+    const {addItem} = useContext(CartContext)
+   
+    
+    
+    
+    
+    const [cargado, estaCargado] = useState(false)
+    const [cantidad, setCantidad] = useState(0)
+    
+    function onAdd(numero) {
+        setCantidad(numero);
+    }
+    
+    function agregarCarrito(){
+        const producto = {
+            "id": props.id,
+            "nombre": props.nombre,
+            "valor": props.valor,
+            "cantidad": cantidad
+        }
+    addItem(producto)
+    
+    estaCargado(true)   
+    
+
+    }
+
 
     return (
-             <div className='card md:ml-20 my-5 flex'>
+             <div className='card md:ml-20 my-5 md:flex'>
                 
-            <div className="w-full max-w-sm bg-white  dark:bg-gray-800 dark:border-gray-700 ">
+            <div className="w-full max-w-sm bg-white dark:bg-gray-800 dark:border-gray-700">
                
                     <img className="p-8 rounded-t-lg" src={props.img} alt="productimage" />
                 
@@ -29,11 +57,11 @@ function ItemDetail(props) {
 
                     </div>
                     <span className="text-white font-bold"> Precio : {props.valor} </span>
-                   <ItemCount stock={props.stock} initial={0}/>
+                   {!cargado ? <ItemCount stock={props.stock} initial={0} funcion={onAdd}/> : <div className="flex justify-center mt-5"><CartWidget/></div>}
                 </div>
             </div>
                     
-            <div className="w-full max-w-sm bg-white  dark:bg-gray-800 dark:border-gray-700 ">
+            <div className="w-full max-w-sm pt-3 bg-white dark:bg-gray-800 dark:border-gray-700">
                 
                 <div className="px-5 pb-5 mt-10">
                    
@@ -41,7 +69,7 @@ function ItemDetail(props) {
                         <span className="text-s font-semibold mr-2 px-2.5 py-0.5 rounded text-white ml-3"> {props.reseña}</span>
                     </div>
 
-                    <button className="text-white font-bold ml-20 mt-6 rounded-full bg-red-700 p-2 hover:bg-red-500"> Agregar al carrito</button>
+                    <button className="text-white font-bold ml-20 mt-6 rounded-full bg-red-700 p-2 hover:bg-red-500" onClick={agregarCarrito}> Agregar al carrito</button>
                    
                 </div>
             </div>

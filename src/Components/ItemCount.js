@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
-export default function ItemCount({ stock, initial }) {
+export default function ItemCount({ stock, initial, funcion }) {
     const [value, setValue] = useState(initial);
 
     function onAdd() {
@@ -12,6 +12,12 @@ export default function ItemCount({ stock, initial }) {
     function onSubstract() {
         value !== 0 ? setValue(value - 1) : setValue(value + 0);
     }
+
+    useEffect(() => {
+        funcion(value);
+      
+    }, [value])
+    
     
     return (
         <div>

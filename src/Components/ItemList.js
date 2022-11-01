@@ -38,7 +38,7 @@ export default function ItemList(){
 
 
     return ( 
-        <div className="flex flex-wrap justify-start">
+        <div className="flex flex-wrap justify-start mt-20">
           {!loading ? cartas 
           : categoria ? cartas
           .filter((libro) => libro.categoria === categoria)

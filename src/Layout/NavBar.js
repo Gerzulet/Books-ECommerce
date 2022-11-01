@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import book from "../Assets/book.svg"
 import CartIcon from "../Components/CartWidget"
 import { NavLink } from "react-router-dom";
+import React from "../Assets/react.svg"
+import Javascript from "../Assets/square-js.svg"
 
 function NavBar() {
     return (
@@ -18,33 +20,59 @@ function NavBar() {
 
                 </div>
 
-                <ul className='md:flex md:items-center z-[-1] bg-sky-500 md:bg-sky-500 md:z-auto md:static absolute w-full left-0 md:w-auto py-5 md:pl-0 pl-7'>
-                    
-                    <li className="text-xl hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0">
-                        <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white  text-l hover:text-cyan-800 duration-500 px-4 py-2.5 text-center inline-flex items-center " type="button">Categorias <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                <ul className='md:flex flex items-center   z-[-1] bg-sky-500 md:bg-sky-500 md:z-auto md:static absolute w-full left-0 md:w-auto py-5  pl-7'>
 
-                        <div id="dropdown" class="hidden  z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+            
+
+                    <li className="text-xl hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0 ">
+
+                
+                        <button id="dropdownDefault" data-dropdown-toggle="dropdown" className="collapse md:visible text-white  text-l hover:text-cyan-800 duration-500 px-4 py-2.5 text-center inline-flex items-center " type="button">Categorias <svg className="ml-2 w-4 h-4 " aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+                        <div id="dropdown" className="hidden  z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                             <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                                 <li>
-                                    <NavLink to = {`/categoria/react`} className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">React</NavLink>
-                                    
-                                </li>
-                                <li>
-                                <NavLink to = {`/categoria/javascript`} className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Javascript</NavLink>
+                                    <NavLink to={`/categoria/react`} className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">React</NavLink>
 
                                 </li>
-                          
+                                <li>
+                                    <NavLink to={`/categoria/javascript`} className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Javascript</NavLink>
+
+                                </li>
+
                             </ul>
+
+
                         </div>
+                    
+                        
+
+
+
                     </li>
-                    <li className="text-xl hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0">
-                        <a href="#">Contacto</a>
+
+                    <li className=" text-xl hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0">
+                        <a href="#" className="invisible md:visible">Contacto</a>
                     </li>
-                    <li className="text-xl hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0 ">
+                    <li className="text-xl md:visible collapse hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0 ">
                         <CartIcon />
                     </li>
 
+
+
                 </ul>
+
+
+                <div className="flex justify-center md:hidden">
+                            <NavLink to={`/categoria/react`} className="md:invisible block py-2 px-4 ">
+                                <img src={React} alt="react" className="h-10"></img>
+                            </NavLink>
+                            <NavLink to={`/categoria/javascript`} className="md:invisible block py-2 px-4 ">
+                                <img src={Javascript} alt="javascript" className="h-10"></img>
+                            </NavLink>
+                        </div>
+
+
             </nav>
 
         </div>

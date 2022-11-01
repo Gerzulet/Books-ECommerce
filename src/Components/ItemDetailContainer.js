@@ -42,7 +42,7 @@ function ItemDetailContainer() {
  return(
 
     
-        <div className="md:flex justify-start ml-10 h-[100vh] ">   
+        <div className="md:flex justify-center h-[100vh] ">   
         {loading ? cartas : cartas
           .filter((libro) => libro.id.includes(libroID))
           .map((el)=>(
