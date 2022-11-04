@@ -19,7 +19,7 @@ export default function ItemList(){
         setTimeout(() => {
             resolve(items)
             isLoading(true)
-        }, 2000);
+        }, 500);
     })
   }
 

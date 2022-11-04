@@ -4,7 +4,7 @@ export default function Footer() {
 
     return (
 
-        <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-2 dark:bg-sky-500 static">
+        <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-2 dark:bg-sky-500 static bottom-0 w-full">
             <div className="sm:flex sm:items-center sm:justify-between">
                 <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CODERHOUSE</span>
