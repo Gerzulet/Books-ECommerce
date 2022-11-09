@@ -2,36 +2,42 @@ import { useContext, useState, useEffect } from "react"
 import CartContext from "../Context/CartContext"
 import CartItemCount from "../Components/CartItemCount"
 import trash from "../Assets/trash-fill.svg"
-import { ChildProcess } from "child_process"
-
+import {addDoc, collection, getFirestore} from 'firebase/firestore'
 
 
 function Cart() {
 
     const { addItem, removeItem, clear, cart} = useContext(CartContext)
     const [total, setTotal] = useState(0)
- 
+    const [id, setOrderId] = useState({}); 
 
-
-  useEffect(() => {
     
-      const subtotal = cart.reduce((previus,current) => previus + (current.valor * current.cantidad), 0)
+
+  function agregarACarrito(cantidad, libro) {
+const subtotal = cart.reduce((previus,current) => previus + (current.valor * current.cantidad), 0)
       const iva = (subtotal * 0.21).toFixed(0)
       const total = Number(subtotal * 1.21).toFixed(0);
     const valores = [subtotal ,iva, total]
 
-   setTotal(valores)
-
-  
-  }, [cart, total])
-
-  function agregarACarrito(cantidad, libro) {
 
         addItem(libro,cantidad)
+        setTotal(valores)
 
   }
   
-    
+   function sendOrder() {
+        const order = {
+        buyer: {name: "Invitado", phone: "11111111", email:"invitado@gmail.com"}, 
+        items: cart, 
+        total: total[2] 
+    }
+
+    const db = getFirestore(); 
+
+    const ordersCollection = collection(db, "orders"); 
+    addDoc(ordersCollection, order).then(({id}) => alert("Se numero de orden es " + id))
+clear();
+  } 
 
 
   
@@ -92,7 +98,7 @@ function Cart() {
                     <h1 className="text-2xl ml-2 text-white  hover:animate-pulse cursor-default">$ {total[2]} US</h1>
 
                 </div>
-                <button className=" bg-red-600 text-white rounded-xl p-3 hover:bg-red-700 ">Continuar</button>
+                <button onClick={sendOrder}className=" bg-red-600 text-white rounded-xl p-3 hover:bg-red-700 ">¡Enviar Orden!</button>
             </div>
         </div>
     )

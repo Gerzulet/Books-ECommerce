@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Spinner from "./Spinner";
-
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 
 
@@ -17,25 +17,17 @@ function ItemDetailContainer() {
     const [cartas, setCartas] = useState(<Spinner/>);
   const [loading, isLoading] = useState(true)
 
-  //SIMULACION API
-  const getItem = () => {
-    let items = require("../Backend/productos.json")
-    return new Promise ((resolve, reject) => {
-        setTimeout(() => {
-            resolve(items)
-            isLoading(false)
-        }, 1000);
-    })
-  }
-
-
   useEffect(() => {
-    async function fetchedItems(){
-      const items = await getItem(); 
-      setCartas(items)
-    }
+    
+const db = getFirestore()
 
-    fetchedItems()
+const docRef = query(collection(db, 'items'), where("id", "==", libroID))
+
+getDocs(docRef)
+  .then((snapshot) => {
+  setCartas(snapshot.docs.map((doc)=> ({id:doc.id, ...doc.data()})));
+        isLoading(false);
+  })
   }, []);
 
 // Implementar mock invocando a getItem() y utilizando el resolver then
@@ -44,7 +36,6 @@ function ItemDetailContainer() {
     
         <div className="md:flex justify-center h-[100vh] ">   
         {loading ? cartas : cartas
-          .filter((libro) => libro.id.includes(libroID))
           .map((el)=>(
 
             <ItemDetail 

@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import ItemList from './ItemList';
-
- function ItemlistContainer(greeting) {
+ function ItemlistContainer() {
   return (
 
     <Fragment>
