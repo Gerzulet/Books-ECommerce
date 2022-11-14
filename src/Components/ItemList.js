@@ -25,8 +25,6 @@ getDocs(docRef)
   })
   }, [categoria]);
 
-
-
     return ( 
         <div className="flex flex-wrap justify-start mt-20">
           {loading ? cartas 

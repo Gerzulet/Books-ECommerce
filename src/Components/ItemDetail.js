@@ -11,7 +11,6 @@ function ItemDetail(props) {
 
 
 
-
     const [cargado, estaCargado] = useState(false)
     const [cantidad, setCantidad] = useState(0)
 
@@ -51,7 +50,7 @@ function ItemDetail(props) {
 
                     </div>
                     <span className="text-white font-bold"> Precio : {props.valor} </span>
-                    {!cargado ? <ItemCount stock={props.stock} initial={0} funcion={onAdd} /> : <div className="flex justify-center mt-5"><CartWidget /></div>}
+                    {!cargado ? <ItemCount stock={props.stock} initial={1} funcion={onAdd} /> : <div className="flex justify-center mt-5"><CartWidget /></div>}
                 </div>
             </div>
 
