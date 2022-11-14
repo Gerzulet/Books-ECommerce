@@ -7,22 +7,23 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     const carritoProv = cart
-   
+  const [cartUpdate, setCartUpdate] = useState(true) 
     
     const addItem = (item, cantidad) => {
-        
-        if (!isInCart(item.id)) {
-            
-            const producto = {
+        const producto = {
                 "id": item.id,
                 "nombre": item.nombre,
                 "valor": item.valor,
                 "cantidad": cantidad,
                 "stock": item.stock
             }
-
+        if (!isInCart(item.id)) {
+            
+            
+            
             carritoProv.push(producto)
             setCart(carritoProv)
+            setCartUpdate((prev) => !prev);
             
         } else if (isInCart) {
             const posItem = carritoProv.findIndex(libro => libro.id === item.id)
@@ -40,6 +41,7 @@ const CartProvider = ({children}) => {
     
     const clear = () => {
         setCart([])
+        setCartUpdate((prev) => !prev)
         
     }
     
@@ -48,9 +50,9 @@ const CartProvider = ({children}) => {
         
     }
     
-  
+ 
     
-    return <CartContext.Provider value={{addItem, removeItem, clear, isInCart, cart}}>{children} </CartContext.Provider>
+    return <CartContext.Provider value={{addItem, removeItem, clear, isInCart, cart, cartUpdate }}>{children} </CartContext.Provider>
 }
 
 export {CartProvider}

@@ -4,13 +4,12 @@ import CartContext from "../Context/CartContext";
 import { useContext, useState, useEffect } from 'react'
 
 function CartWidget() {
-  const { cart, addItem } = useContext(CartContext)
+  const { cart,cartUpdate} = useContext(CartContext)
   const [cartLength, setCartLength] = useState(0);
 
   useEffect(() => {
-    console.log("Se ha agregado o removido algo al carrito")
     setCartLength(cart.length)
-  }, [cart, addItem])
+  }, [cartUpdate])
   return (
     <NavLink to={`/cart`} > <button type="button" className="inline-flex relative items-center p-3 
       text-sm font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 ">
