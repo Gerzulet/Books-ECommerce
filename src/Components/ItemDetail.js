@@ -2,9 +2,9 @@
 import "../Assets/Item.css"
 import ItemCount from "./ItemCount"
 import { useState, useContext } from 'react'
-import CartWidget from './CartWidget'
 import CartContext from '../Context/CartContext'
-
+import CartIcon from '../Assets/cart-plus-solid.svg'
+import {NavLink} from 'react-router-dom'
 function ItemDetail(props) {
     const { addItem } = useContext(CartContext)
 
@@ -50,7 +50,13 @@ function ItemDetail(props) {
 
                     </div>
                     <span className="text-white font-bold"> Precio : {props.valor} </span>
-                    {!cargado ? <ItemCount stock={props.stock} initial={1} funcion={onAdd} /> : <div className="flex justify-center mt-5"><CartWidget /></div>}
+                    {!cargado ? <ItemCount stock={props.stock} initial={1} funcion={onAdd} />
+            : 
+            <div className=" ml-30 mt-9 fill-neutral-200 flex justify-center">
+            <NavLink to={`/cart`} > <button type="button" className="inline-flex relative items-center p-3 text-sm 
+                font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+      <img className="h-14 mx-4 cursor-pointer" src={CartIcon}></img> </button> </NavLink>
+</div> }
                 </div>
             </div>
 
