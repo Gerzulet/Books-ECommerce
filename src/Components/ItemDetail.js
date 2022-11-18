@@ -53,7 +53,7 @@ function ItemDetail(props) {
                     {!cargado ? <ItemCount stock={props.stock} initial={1} funcion={onAdd} />
             : 
             <div className=" ml-30 mt-9 fill-neutral-200 flex justify-center">
-            <NavLink to={`/cart`} > <button type="button" className="inline-flex relative items-center p-3 text-sm 
+            <NavLink to={`/cart`} > <button type="button" className="animate-pulse inline-flex relative items-center p-3 text-sm 
                 font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 ">
       <img className="h-14 mx-4 cursor-pointer" src={CartIcon}></img> </button> </NavLink>
 </div> }
@@ -68,7 +68,7 @@ function ItemDetail(props) {
                         <span className="text-s font-semibold mr-2 px-2.5 py-0.5 rounded text-white ml-3"> {props.reseña}</span>
                     </div>
 
-                    <button className="text-white font-bold ml-20 mt-6 rounded-full bg-red-700 p-2 hover:bg-red-500" onClick={() => agregarCarrito(props)}> Agregar al carrito</button>
+                    <button className="text-white font-bold ml-20 mt-6 rounded-full bg-red-700 p-2 transition-all ease-in-out hover:scale-125 duration-500 hover:bg-red-500" onClick={() => agregarCarrito(props)}> Agregar al carrito</button>
 
                 </div>
             </div>

@@ -9,17 +9,18 @@ function NavBar() {
   return (
     <div className="bg-sky-500 shadow text-white">
       <nav className='md:flex md:items-center md:justify-between'>
-        <div className="flex justify-between items-center">
-          <span className="text-xl font-mono mx-4 p-5 font-['monaco'] hover:text-cyan-800 duration-500 cursor-pointer">
-            <Link to={`/`} >
+
+        <Link to={`/`} >
+          <div className="flex justify-between items-center">
+            <span className="text-xl font-mono mx-4 p-5 font-['monaco'] hover:text-cyan-800 duration-500 cursor-pointer">
               <img className="h-10 inline mx-3" src={book} alt="book"></img>
-              Shopping Goods </Link>
+              Shopping Goods
 
-          </span>
+            </span>
 
 
-        </div>
-
+          </div>
+        </Link>
         <ul className='md:flex flex items-center   z-[-1] bg-sky-500 md:bg-sky-500 md:z-auto md:static absolute w-full left-0 md:w-auto py-5  pl-7'>
 
 

@@ -23,7 +23,7 @@ export default function item(props) {
                         <span className="text-1xl font-bold text-gray-900 dark:text-white">{props.autor}</span>
                         
                             
-                            <NavLink to = {`/${props.categoria}/${props.id}`} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Me interesa!</NavLink> 
+                            <NavLink to = {`/${props.categoria}/${props.id}`} className="text-white bg-blue-700 transition ease-in-out  hover:-translate-y-2  hover:scale-110 hover:bg-indigo-500 duration-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Me interesa!</NavLink> 
                     </div>
                 </div>
             </div>
