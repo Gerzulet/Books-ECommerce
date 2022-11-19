@@ -12,7 +12,6 @@ export default function InputModal({ cart, valorTotal }) {
   const [mail, setMail] = useState("")
   const [mailConfirmacion, setMailConfirmacion] = useState("")
   const {clear} = useContext(CartContext)
-  const [confirm, setConfirm] = useState(false)
 
 
   function handleSubmit(event) {

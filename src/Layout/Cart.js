@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext,  useState } from "react"
 import CartContext from "../Context/CartContext"
 import CartItemCount from "../Components/CartItemCount"
 import trash from "../Assets/trash-fill.svg"
@@ -24,11 +24,10 @@ function Cart() {
 
   }
 
-  useEffect(() => {
-    resumenPrecio()
-  }, [removeItem, clear])
 
   
+
+
   return (
 
     <div className=" h-[30rem] w-[90%] ml-20 bg-white my-9 static overflow-auto rounded-xl ">
