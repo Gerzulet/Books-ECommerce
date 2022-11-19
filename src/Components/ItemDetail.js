@@ -28,11 +28,11 @@ function ItemDetail(props) {
 
 
     return (
-        <div className='card md:ml-20 my-5 md:flex'>
+        <div className='card md:ml-20 my-5   md:flex'>
 
-            <div className="w-full max-w-sm bg-white dark:bg-gray-800 dark:border-gray-700">
+            <div className="w-full max-w-sm bg-white   dark:bg-gray-800 dark:border-gray-700">
 
-                <img className="p-8 rounded-t-lg" src={props.img} alt="productimage" />
+                <img  className="p-8 rounded-t-lg ml-20  h-80 " src={props.img} alt="productimage" />
 
                 <div className="px-5 pb-5 text-center">
 
@@ -53,14 +53,14 @@ function ItemDetail(props) {
                     {!cargado ? <ItemCount stock={props.stock} initial={1} funcion={onAdd} />
             : 
             <div className=" ml-30 mt-9 fill-neutral-200 flex justify-center">
-            <NavLink to={`/cart`} > <button type="button" className="animate-pulse inline-flex relative items-center p-3 text-sm 
+            <NavLink to={`/cart`} > <button type="button" className="animate-pulse inline-flex relative items-center h-1 text-sm 
                 font-medium text-center text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 ">
       <img className="h-14 mx-4 cursor-pointer" src={CartIcon}></img> </button> </NavLink>
 </div> }
                 </div>
             </div>
 
-            <div className="w-full max-w-sm pt-3 bg-white dark:bg-gray-800 dark:border-gray-700">
+            <div className="w-full   max-w-sm pt-3 bg-white dark:bg-gray-800 dark:border-gray-700">
 
                 <div className="px-5 pb-5 mt-10">
 

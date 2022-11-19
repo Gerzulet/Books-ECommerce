@@ -35,7 +35,10 @@ getDocs(docRef)
 
     
         <div className="md:flex justify-center h-[100vh] ">   
-        {loading ? cartas : cartas
+        {loading ? <Spinner/> 
+        : cartas.length === 0 ? <h1 className="text-white text-4xl mt-60 font-semibold  ">El producto solicitado no existe.</h1>
+        : cartas ? 
+         cartas
           .map((el)=>(
 
             <ItemDetail 
@@ -51,8 +54,9 @@ getDocs(docRef)
             stock= {el.stock}
 
             />
-          ))}
-        
+          )) : null } 
+      
+          
       
 
 

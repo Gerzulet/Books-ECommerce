@@ -52,9 +52,7 @@ function NavBar() {
 
           </li>
 
-          <li className=" text-xl hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0">
-            <button type="button" data-modal-toggle="authentication-modal" className="invisible md:visible">Iniciar Sesion</button>
-          </li>
+
           <li className="text-xl md:visible collapse hover:text-cyan-800 duration-500 my-4 mx-4 md:my-0 ">
             <CartIcon />
           </li>
