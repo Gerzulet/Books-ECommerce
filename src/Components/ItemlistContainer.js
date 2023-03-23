@@ -1,18 +1,21 @@
 import React, { Fragment } from 'react'
 import ItemList from './ItemList';
- function ItemlistContainer() {
+import Hero from '../Components/Hero'
+
+
+function ItemlistContainer() {
   return (
 
     <Fragment>
+      <Hero />
+      <span id="itemlistcontainer" className=' md:flex md:justify-center md:mb-[50vh]'>
+        <br /><br /><br /><br /><br />
 
-      <span className=' md:flex md:justify-center md:mb-[50vh]'>
-        <br/><br/><br/><br/><br/>
-       
-        <ItemList/> 
+        <ItemList />
       </span>
 
     </Fragment>
-    
+
   )
 }
 
