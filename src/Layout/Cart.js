@@ -1,4 +1,4 @@
-import { useContext,  useState } from "react"
+import { useContext, useState } from "react"
 import CartContext from "../Context/CartContext"
 import CartItemCount from "../Components/CartItemCount"
 import trash from "../Assets/trash-fill.svg"
@@ -25,12 +25,12 @@ function Cart() {
   }
 
 
-  
+
 
 
   return (
 
-    <div className=" h-[30rem] w-[90%] ml-20 bg-white my-9 static overflow-auto rounded-xl ">
+    <div className=" h-[30rem] w-[90%] ml-20 bg-white my-9  overflow-auto relative rounded-xl ">
 
       <table className="table-auto border-separate border-spacing-1 w-full border pt-2 overflow-scroll">
         <thead>
@@ -58,7 +58,8 @@ function Cart() {
       </table>
 
 
-      <div className="flex items-center justify-around bg-slate-500  flex-grow h-16  w-[90%] absolute bottom-0 mb-10 rounded-b-xl">
+
+      <div className="flex items-center justify-around flex-grow h-16  w-[90%]  absolute bottom-0  mb-10 rounded-b-xl">
 
         <button onClick={clear}>
           <img src={trash} className="h-8 fill-slate-200"></img>
@@ -66,18 +67,20 @@ function Cart() {
 
 
         <div className="flex items-center">
-          <h2 className="text-white text-xl font-sans mx-4">Subtotal: </h2>
-          <h1 className="text-xl ml-2 text-white  hover:animate-pulse cursor-default">$ {total[0]} US</h1>
-          <h2 className="text-white text-xl font-sans mx-4">IVA: </h2>
-          <h1 className="text-xl ml-2 text-white  hover:animate-pulse cursor-default">$ {total[1]} US</h1>
-          <h2 className="text-white text-2xl font-sans mx-10">Total: </h2>
-          <h1 className="text-2xl ml-2 text-white  hover:animate-pulse cursor-default">$ {total[2]} US</h1>
+          <h2 className="text-black text-xl font-sans mx-4">Subtotal: </h2>
+          <h1 className="text-xl ml-2 text-black  hover:animate-pulse cursor-default">$ {total[0]} US</h1>
+          <h2 className="text-black text-xl font-sans mx-4">IVA: </h2>
+          <h1 className="text-xl ml-2 text-black  hover:animate-pulse cursor-default">$ {total[1]} US</h1>
+          <h2 className="text-black text-2xl font-sans mx-10">Total: </h2>
+          <h1 className="text-2xl ml-2 text-black  hover:animate-pulse cursor-default">$ {total[2]} US</h1>
 
         </div>
-          <InputModal cart={cart} valorTotal={total[2]}/> 
+        <InputModal cart={cart} valorTotal={total[2]} />
       </div>
-      
+
     </div>
+
+
   )
 
 

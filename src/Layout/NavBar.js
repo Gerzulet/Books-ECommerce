@@ -16,8 +16,10 @@ export default function NavBar() {
         <div class="flex items-center justify-between h-16 lg:h-[72px]">
           <div class="flex items-center flex-shrink-0">
             <a href="#" title="" class="inline-flex">
-              <span class="sr-only"> MyLibrary </span>
-              <img class="w-auto h-8" src={wordMark} alt="" />
+              <Link to={'/'} >
+                <span class="sr-only"> MyLibrary </span>
+                <img class="w-auto h-8" src={wordMark} alt="" />
+              </Link>
             </a>
           </div>
 
