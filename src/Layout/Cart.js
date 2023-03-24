@@ -48,7 +48,7 @@ function Cart() {
                 <td>{libro.nombre}</td>
                 <td>$ {libro.valor} US </td>
                 <td><CartItemCount stock={libro.stock} libro={libro} funcion={agregarACarrito} initial={libro.cantidad} /></td>
-                <td><img src={trash} onClick={() => removeItem(libro)} className="ml-20 h-5 cursor-pointer"></img></td>
+                <td><img src={trash} alt="trash" onClick={() => removeItem(libro)} className="ml-20 h-5 cursor-pointer"></img></td>
               </tr>
             )}
 
@@ -62,7 +62,7 @@ function Cart() {
       <div className="flex items-center justify-around flex-grow h-16  w-[90%]  absolute bottom-0  mb-10 rounded-b-xl">
 
         <button onClick={clear}>
-          <img src={trash} className="h-8 fill-slate-200"></img>
+          <img src={trash} alt="trash" className="h-8 fill-slate-200"></img>
         </button>
 
 

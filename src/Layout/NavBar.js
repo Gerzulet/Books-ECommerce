@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import CartIcon from "../Components/CartWidget"
 import { NavLink } from "react-router-dom";
 import wordMark from '../Assets/wordmark.png'
 
@@ -24,13 +23,16 @@ export default function NavBar() {
           </div>
 
           <div class="hidden lg:flex lg:justify-center lg:space-x-10 xl:space-x-14">
-            <a href="#" title="" class="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white"> Web Development </a>
 
-            <a href="#" title="" class="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white"> Programming </a>
+            <NavLink to={`/categoria/desarrolloweb`} className="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white">Desarrollo Web</NavLink>
 
-            <a href="#" title="" class="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white"> Algorithms </a>
+            <NavLink to={`/categoria/programacion`} className="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white">Programacion</NavLink>
 
-            <a href="#" title="" class="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white"> Search </a>
+            <NavLink to={`/categoria/algorritmos`} className="text-base font-medium text-gray-400 transition-all duration-200 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:text-white">Algorritmos</NavLink>
+
+
+
+
           </div>
 
           <div class="flex items-center justify-end space-x-5">

@@ -59,66 +59,61 @@ export default function Footer() {
           </div>
 
           <div>
-            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Company</p>
+            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Compañia</p>
 
             <ul class="mt-6 space-y-4">
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Sobre nosotros</a>
               </li>
 
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Features </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Trabajos </a>
               </li>
 
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Works </a>
-              </li>
-
-              <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Career </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Carrera </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Help</p>
+            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Ayuda</p>
 
             <ul class="mt-6 space-y-4">
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Customer Support </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Atencion al cliente</a>
               </li>
 
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Delivery Details </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Detalles de delivery</a>
               </li>
 
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Terminos y condiciones</a>
               </li>
 
               <li>
-                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Privacy Policy </a>
+                <a href="#" title="" class="flex text-base text-white transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Politicas de privacidad</a>
               </li>
             </ul>
           </div>
 
           <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
+            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribirse</p>
 
             <form action="#" method="POST" class="mt-6">
               <div>
                 <label for="email" class="sr-only">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" class="block w-full p-4 text-white placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
+                <input type="email" name="email" id="email" placeholder="Ingresa tu mail" class="block w-full p-4 text-white placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
               </div>
 
-              <button type="submit" class="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700">Subscribe</button>
+              <button type="submit" class="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700">Subscribirse</button>
             </form>
           </div>
         </div>
 
         <hr class="mt-16 mb-10 border-gray-200" />
 
-        <p class="text-sm text-center text-white">© Copyright 2021, All Rights Reserved by Postcraft</p>
       </div>
     </section>
 
