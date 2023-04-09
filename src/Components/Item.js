@@ -1,12 +1,26 @@
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import "../Assets/Item.css"
 
-export default function item(props) {
+export default function Item(props) {
+
+  useEffect(() => {
+    const handleScrollToSection = (event) => {
+      if (event.detail === 'section-id') {
+        const section = document.getElementById('section-id');
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    window.addEventListener('scrollToSection', handleScrollToSection);
+    return () => {
+      window.removeEventListener('scrollToSection', handleScrollToSection);
+    };
+  }, []);
 
 
   return (
 
-    <div className='card md:mx-5 my-5 '>
+    <div id="section-id" className='card md:mx-5 my-5 '>
       <div className="w-full max-w-sm bg-[#262626] rounded-md shadow-md  border-4 border-yellow-500">
 
         <img className="p-8 rounded-t-lg" src={props.img} alt="product image" />

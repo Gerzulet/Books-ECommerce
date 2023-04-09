@@ -11,7 +11,7 @@ export default function InputModal({ cart, valorTotal }) {
   const [phone, setPhone] = useState("")
   const [mail, setMail] = useState("")
   const [mailConfirmacion, setMailConfirmacion] = useState("")
-  const {clear} = useContext(CartContext)
+  const { clear } = useContext(CartContext)
 
 
   function handleSubmit(event) {
@@ -32,19 +32,19 @@ export default function InputModal({ cart, valorTotal }) {
 
 
     const ordersCollection = collection(db, "orders");
-      addDoc(ordersCollection, order).then(({ id }) =>
-        Notiflix.Report.success(
-          '¡Orden enviada!',
-          `Su numero de orden es: ${id}`,
-          'Entendido!',
-          {
-            width: '360px',
-            svgSize: '120px',
-          },
-        ),
-        setShowModal(false),
-        clear()
-      ) 
+    addDoc(ordersCollection, order).then(({ id }) =>
+      Notiflix.Report.success(
+        '¡Orden enviada!',
+        `Su numero de orden es: ${id}`,
+        'Entendido!',
+        {
+          width: '360px',
+          svgSize: '120px',
+        },
+      ),
+      setShowModal(false),
+      clear()
+    )
 
 
 
@@ -104,7 +104,7 @@ export default function InputModal({ cart, valorTotal }) {
 
                         </div>
                       </div>
-                      <button type="submit"  className={`w-full text-white ${mail !== mailConfirmacion ? "invisible " : "visible"}  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>Enviar!</button>
+                      <button type="submit" className={`w-full text-white ${mail !== mailConfirmacion ? "invisible " : "visible"}  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}>Enviar!</button>
 
                     </form>
                   </div>

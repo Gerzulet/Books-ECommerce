@@ -22,6 +22,6 @@ Permite agilmente notificar al usuario y hacer reportes. Como los que se pueden 
 
 ## TODO 
 
-- [ ] Devolver funcionalidad a carrito (usar el navlink correspondiente)
+- [X] Devolver funcionalidad a carrito (usar el navlink correspondiente)
 - [X] Ubicar nuevo fondo 
 - [ ] Hacer un scroll al manejar las categorias
