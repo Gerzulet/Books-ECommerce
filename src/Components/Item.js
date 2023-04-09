@@ -24,7 +24,7 @@ export default function Item(props) {
       <div className="w-full max-w-sm bg-[#262626] rounded-md shadow-md  hover:border-4 border-yellow-500">
 
 
-        <img className="p-8 rounded-t-lg" src={props.img} alt="product image" />
+        <img className="p-8 rounded-t-lg" src={props.img} alt="product" />
 
         <div className="px-5 pb-5">
           <h5 className="text-xl font-semibold tracking-tight text-white">{props.nombre}</h5>
