@@ -21,7 +21,8 @@ export default function Item(props) {
   return (
 
     <div id="section-id" className='card md:mx-5 my-5 '>
-      <div className="w-full max-w-sm bg-[#262626] rounded-md shadow-md  border-4 border-yellow-500">
+      <div className="w-full max-w-sm bg-[#262626] rounded-md shadow-md  hover:border-4 border-yellow-500">
+
 
         <img className="p-8 rounded-t-lg" src={props.img} alt="product image" />
 

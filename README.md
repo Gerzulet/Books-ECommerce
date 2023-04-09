@@ -1,7 +1,7 @@
 ## Proyecto Final CoderHouse 
 #### German Soto 
 
-E-commerce realizado con React.js. 
+E-commerce realizado con React.js y TailwindCSS. 
 
 ### Funcionalidades 
 
@@ -24,4 +24,4 @@ Permite agilmente notificar al usuario y hacer reportes. Como los que se pueden 
 
 - [X] Devolver funcionalidad a carrito (usar el navlink correspondiente)
 - [X] Ubicar nuevo fondo 
-- [ ] Hacer un scroll al manejar las categorias
+- [X] Hacer un scroll al manejar las categorias
