@@ -18,3 +18,10 @@ E-commerce realizado con React.js.
 
 Notiflix es una libreria de Javascript sin bloqueos del lado del cliente, cuadros emergentes, e indicadores de carga. 
 Permite agilmente notificar al usuario y hacer reportes. Como los que se pueden observar en el carrito de compras al utilizar sus diversas funcionalidades. 
+
+
+## TODO 
+
+- [ ] Devolver funcionalidad a carrito (usar el navlink correspondiente)
+- [X] Ubicar nuevo fondo 
+- [ ] Hacer un scroll al manejar las categorias

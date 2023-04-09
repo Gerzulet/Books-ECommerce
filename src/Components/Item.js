@@ -6,8 +6,8 @@ export default function item(props) {
 
   return (
 
-    <div className='card md:mx-5 my-5'>
-      <div className="w-full max-w-sm bg-[#111827] rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ">
+    <div className='card md:mx-5 my-5 '>
+      <div className="w-full max-w-sm bg-[#262626] rounded-md shadow-md  border-4 border-yellow-500">
 
         <img className="p-8 rounded-t-lg" src={props.img} alt="product image" />
 
