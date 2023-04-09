@@ -30,7 +30,7 @@ function Cart() {
 
   return (
 
-    <div className=" h-[30rem] w-[90%] ml-20 bg-white my-9  overflow-auto relative rounded-xl ">
+    <div className=" h-[30rem] w-[90%] text-white   ml-20 bg-gray-600 my-9  border-2 border-yellow-400 overflow-auto opacity-95 relative rounded-xl ">
 
       <table className="table-auto border-separate border-spacing-1 w-full border pt-2 overflow-scroll">
         <thead>

@@ -1,10 +1,10 @@
-import cartImage from "../Assets/cart3.svg"
+import cartImage from "../Assets/shopping-cart.png"
 import { NavLink } from "react-router-dom";
 import CartContext from "../Context/CartContext";
 import { useContext, useState, useEffect } from 'react'
 
 function CartWidget() {
-  const { cart,cartUpdate} = useContext(CartContext)
+  const { cart, cartUpdate } = useContext(CartContext)
   const [cartLength, setCartLength] = useState(0);
 
   useEffect(() => {
